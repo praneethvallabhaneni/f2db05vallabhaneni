@@ -10,6 +10,15 @@ var engineRouter = require('./routes/engines');
 var gridBuildRouter = require('./routes/gridbuild');
 var selectorRouter = require('./routes/selector');
 
+require('dotenv').config(); 
+const connectionString =  process.env.MONGO_CON 
+mongoose = require('mongoose'); 
+mongoose.connect(connectionString,  
+  {
+    useNewUrlParser: true, 
+    useUnifiedTopology: true
+}); 
+
 
 var app = express();
 
