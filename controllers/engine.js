@@ -17,7 +17,7 @@ exports.engine_list = async function(req, res) {
 exports.engine_view_all_Page = async function(req, res) { 
     try{ 
         theEngines = await Engine.find(); 
-        res.render('engine', { title: 'Engine Search Results', results: theEngines }); 
+        res.render('engines', { title: 'Engine Search Results', results: theEngines }); 
     } 
     catch(err){ 
         res.status(500); 

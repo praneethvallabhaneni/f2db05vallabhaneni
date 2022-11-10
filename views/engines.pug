@@ -7,12 +7,12 @@ block content
   div(class="container-fluid")
     div(class="row")
     each item in engines
-      div(class="col-sm-2" width="215px") bikes type Type:#{item.bikes type}, Cylinders:#{item.Cylinders}, FuelType:#{item.FuelType}, Transmission:#{item.Transmission}
+      div(class="col-sm-2" width="215px") bikes type Type:#{item.bikesType}, Cylinders:#{item.Cylinders}, FuelType:#{item.FuelType}, Transmission:#{item.Transmission}
   br
   div(class="container-fluid")
     div(class="row")
     - for(var i=0;i<engines.length;i++) {
-        div(class="col-sm-2" width="215px" onClick=`buy(${i+1})`) #{engines[i].bikes type}
+        div(class="col-sm-2" width="215px" onClick=`buy(${i+1})`) #{engines[i].bikesType}
     -}
   script. 
     function buy(indexNum) {
