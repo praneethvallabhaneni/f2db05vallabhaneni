@@ -12,6 +12,18 @@ exports.engine_list = async function(req, res) {
     }   
 }; 
 
+// VIEWS 
+// Handle a show all view 
+exports.engine_view_all_Page = async function(req, res) { 
+    try{ 
+        theEngines = await Engine.find(); 
+        res.render('engine', { title: 'Engine Search Results', results: theEngines }); 
+    } 
+    catch(err){ 
+        res.status(500); 
+        res.send(`{"error": ${err}}`); 
+    }   
+}; 
 // for a specific Costume. 
 exports.engine_detail = function(req, res) { 
     res.send('NOT IMPLEMENTED: Engine detail: ' + req.params.id); 
