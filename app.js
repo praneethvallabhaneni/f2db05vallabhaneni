@@ -10,6 +10,7 @@ var usersRouter = require('./routes/users');
 var engineRouter = require('./routes/engines');
 var gridBuildRouter = require('./routes/gridbuild');
 var selectorRouter = require('./routes/selector');
+var engineRouter = require('./routes/engine');
 
 require('dotenv').config(); 
 const connectionString =  process.env.MONGO_CON 
@@ -38,6 +39,7 @@ app.use('/users', usersRouter);
 app.use('/engines', engineRouter);
 app.use('/gridbuild', gridBuildRouter);
 app.use('/selector', selectorRouter);
+app.use('/resource', resourceRouter);
 
 
 // catch 404 and forward to error handler
