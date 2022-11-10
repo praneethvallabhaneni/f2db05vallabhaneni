@@ -11,6 +11,7 @@ var engineRouter = require('./routes/engines');
 var gridBuildRouter = require('./routes/gridbuild');
 var selectorRouter = require('./routes/selector');
 var engineRouter = require('./routes/engines');
+var resourceRouter = require('./routes/resource');
 
 require('dotenv').config(); 
 const connectionString =  process.env.MONGO_CON 
