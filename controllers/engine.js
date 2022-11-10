@@ -32,7 +32,7 @@ exports.engine_detail = function(req, res) {
 // Handle Costume create on POST. 
 exports.engine_create_post = async function(req, res) { 
     console.log(req.body) 
-    let document = new Costume(); 
+    let document = new Engine(); 
     // We are looking for a body, since POST does not have query parameters. 
     // Even though bodies can be in many different formats, we will be picky 
     // and require that it be a json object 
